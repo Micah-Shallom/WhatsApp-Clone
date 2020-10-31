@@ -10,7 +10,6 @@ const Login = () => {
   const [{}, dispatch] = useStateValue();
 
   const signIn = () =>{
-    provider.setCustomParameters({prompt : 'select_account'})
     auth.signInWithPopup(provider).then(result => {
      dispatch({
        type : actionTypes.SET_USER,
